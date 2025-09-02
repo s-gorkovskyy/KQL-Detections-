@@ -1,1 +1,1 @@
-This is my Hunting Query ideas 
+Welcome to my Hunting Query Hub!
