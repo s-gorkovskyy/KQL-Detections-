@@ -1,0 +1,6 @@
+let powershellCmds = dynamic(['http', 'https', 'Invoke-WebRequest', 'System.Net.Http.Client', 'System.Net.WebClient',  
+'Start-BitsTransfer', 'DownloadString', 'DownloadFile']); //powershell download related commands
+DeviceProcessEvents
+| where InitiatingProcessFileName contains "powershell"
+| where ProcessCommandLine has_any (powershellCmds)
+//| where ProcessCommandLine !contains 'xyz' // use this to exclude loud entities
