@@ -1,0 +1,2 @@
+AuditLogs
+| where OperationName contains " deleted security info"
