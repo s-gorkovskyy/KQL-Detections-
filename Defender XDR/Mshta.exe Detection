@@ -1,0 +1,5 @@
+DeviceProcessEvents
+| where ProcessCommandLine contains "mshta"
+or ProcessCommandLine contains ".hta"
+or InitiatingProcessFileName contains "mshta"
+ 
