@@ -1,0 +1,7 @@
+let suspiciousIPs = externaldata(IP: string)
+    [
+    h@"https://raw.githubusercontent.com/pan-unit42/iocs/refs/heads/master/DanaBotV4/C2s"
+    ]
+    with (format="txt");
+union SigninLogs, AADNonInteractiveUserSignInLogs
+| where IPAddress in (suspiciousIPs)
