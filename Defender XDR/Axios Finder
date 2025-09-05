@@ -1,0 +1,12 @@
+//1. To see all attempts to use axios run:
+ 
+SigninLogs
+| where UserAgent contains "axios"
+ 
+//seeing even failed attempts tells you that your users' credentials might have leaked.
+ 
+//2. To see only successful attempts to logon using axios, run:
+ 
+SigninLogs
+| where UserAgent contains "axios" 
+| where ResultSignature == 'SUCCESS'
